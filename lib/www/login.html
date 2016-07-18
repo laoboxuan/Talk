@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>eric test</title>
+    <link rel="stylesheet" href="http://localhost:1335/css/main.css">
+    <link rel="shortcut icon" href="http://localhost:1335/image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="wrapper">
+    <div class="bannerImg">
+        <h1><img src="http://localhost:1335/image/03.png" /></h1>
+    </div>
+    <div class="banner">
+
+        <span id="status"></span>
+    </div>
+    <div id="historyMsg">
+    </div>
+    <div class="controls" >
+        <div class="items">
+
+            <input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+            <input id="emoji" type="button" title="emoji" class="sendEmojiButtonClass"/>
+            <label for="sendImage">
+                <img id="image" img src="http://localhost:1335/image/image.png" class=sendImageButtonClass />
+                <input id="sendImage" type="file" value="image"/>
+            </label>
+            <input id="clearBtn" type="button" title="clear screen"  class="sendClearButtonClass"/>
+
+        </div>
+        <textarea id="messageInput" placeHolder="enter to send"></textarea>
+        <input id="sendBtn" type="button" value="SEND">
+        <div id="emojiWrapper">
+        </div>
+    </div>
+</div>
+<script src="socket.io.js"></script>
+<script src="/js/talk.js"></script>
+</body>
+</html> 
