@@ -9,7 +9,12 @@ html, body {
     padding: 5px;  
     margin: 0 auto;  
     background-color: #ddd;  
-}  
+}
+
+.talkHeader {
+    width: 100px;
+    height: 80px;
+}
 #loginWrapper {  
     position: fixed;  
     top: 0;  
@@ -39,7 +44,7 @@ html, body {
 }  
 .banner {  
     height: 80px;  
-    width: 100%;  
+    width: 100%;
 }
 
 .bannerImg {
@@ -83,7 +88,6 @@ html, body {
  
 .imageLable {  
     position: relative;
-    background-image: url("http://localhost:1335/image/image.png");
     width: 24px;
     height: 24px;
     border: none;
@@ -101,6 +105,7 @@ html, body {
     height: 24px;
     border: none;
 }
+
 
 .sendClearButtonClass {
     background-image: url("http://localhost:1335/image/clear.png");

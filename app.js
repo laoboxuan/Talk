@@ -2,6 +2,7 @@
     favicon = require('serve-favicon'),
     bodyParser = require('body-parser'),
     querystring = require('querystring'),
+    fs = require('fs'),
     app = express();
 
 var userJson = require('./lib/db/user.json');
@@ -63,6 +64,41 @@ app.post('/login',function(req,res){
     }else{
         res.send({"code" : 6500,"errMsg" : "nickName Error"});
     }
+});
+
+
+app.get('/login',function(req,res){
+
+    var filePath = __dirname + '/lib/www/login.html';
+    res.sendFile(filePath);
+});
+
+
+app.post('/regist',function(req,res){
+
+    console.log("regist");
+    var body = req.body;
+    var nickName = body.nickName;
+    var passWord = body.passWord;
+    var rePassWord = body.rePassWord;
+    if(userJson[nickName] === undefined){
+        if(passWord === rePassWord){
+            userJson[nickName] = passWord;
+            var fsResult = fs.writeFileSync("./lib/db/user.json",JSON.stringify(userJson));
+            res.send({"code" : 200,"msg" : {"nickName" : nickName,"token" : passWord}});
+        }else{
+            res.send({"code" : 6500,"errMsg" : "passWord Error"});
+        }
+    }else{
+        res.send({"code" : 6500,"errMsg" : "nickName Error"});
+    }
+});
+
+
+app.get('/regist',function(req,res){
+
+    var filePath = __dirname + '/lib/www/regist.html';
+    res.sendFile(filePath);
 });
 
 app.listen(1335);
