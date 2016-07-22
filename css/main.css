@@ -72,7 +72,12 @@ html, body {
 }  
 .timespan {  
     color: #ddd;  
-}  
+}
+
+.selfMsg {
+    float:right;
+}
+
 .items {  
     height: 30px;  
 }

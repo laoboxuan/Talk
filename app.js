@@ -6,8 +6,8 @@
     app = express();
 
 var userJson = require('./lib/db/user.json');
-var socket = require('./lib/js/socket');
-var handleTalk = require('./lib/js/handleTalk');
+var socket = require('./lib/js/node/socket');
+var handleTalk = require('./lib/js/node/handleTalk');
 
 app.use(favicon(__dirname + '/image/favicon.ico'));
 app.use('/', express.static(__dirname + '/lib/www'));
