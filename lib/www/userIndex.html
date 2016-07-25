@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script  type="text/javascript" src="/js/jquery-3.1.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eric test</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <br><nickName>nickName:</nickName></br>
+    <br><userIndex_online>在线人数:</userIndex_online></br>
+    <br>在线用户列表：</br>
+    <div id="friendList">
+        <table width="490px" id="tableTemp">
+            <tr>
+                <td style=" background-color:#fff">昵称</td>
+                <td style=" background-color:#fff">状态</td>
+                <td style=" background-color:#fff">私聊</td>
+            </tr>
+            <tr id="trLoad" style=" background-color:#fff"><td colspan="3"><span id="spnLoad"></td></tr>
+            <tr id="template">
+                <td style=" background-color:#fff" id="nickName"></td>
+                <td style=" background-color:#fff" id="status"></td>
+                <td style=" background-color:#fff" id="privateTalk"></td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+<script src="/js/socket.io.js"></script>
+<script src="/js/userIndex.js"></script>
+</body>
+</html>

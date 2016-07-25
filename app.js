@@ -101,5 +101,33 @@ app.get('/regist',function(req,res){
     res.sendFile(filePath);
 });
 
+app.get('/get/userList/:nickName/:token',function(req,res){
+
+    var nickName = req.params.nickName;
+    var token = req.params.token;
+    var file = require( './lib/db/user.json');
+
+
+    socket.getOnLineName(function(result){
+        var onLineNickName = result;
+        console.log("onLineNickName:" + onLineNickName);
+
+        var reStr = {
+            "code" : 200,
+            "msg" : []
+        };
+        var num = 0;
+        for(var key in file){
+            reStr.msg[num] = {
+                "nickName" : key,
+                "status" : onLineNickName.indexOf(key)
+            }
+            num ++ ;
+        }
+        res.send(reStr);
+    });
+
+});
+
 app.listen(1335);
 console.log("start,1335");

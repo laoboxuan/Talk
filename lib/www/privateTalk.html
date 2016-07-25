@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script  type="text/javascript" src="/js/jquery-3.1.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eric test</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="banner">
+        <image src="http://localhost:1335/image/talkHeader.gif" class="talkHeader"/>
+    </div>
+    <nickName>friendNickName:</nickName>&nbsp
+    <onLine>状态:</onLine>&nbsp
+    <div id="historyMsg">
+    </div>
+    <div class="controls" >
+        <div class="items">
+
+            <input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+            <label for="sendImage" class="imageLable">
+                <input type="button" value="image"  />
+                <input id="sendImage" type="file" value="image"/>
+            </label>
+            <input id="clearBtn" type="button" value="clear" title="clear screen" />
+        </div>
+        <textarea id="messageInput" placeHolder="enter to send"></textarea>
+        <input id="sendBtn" type="button" value="SEND">
+        <div id="emojiWrapper">
+        </div>
+    </div>
+</div>
+<script src="/js/socket.io.js"></script>
+<script src="/js/talkPage.js"></script>
+</body>
+</html>
