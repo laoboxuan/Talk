@@ -1,1 +1,1 @@
-{"123":"123","qwe":"123","qwe123":"123","eric01":"123"}
+{"123":{"passWord":"123","status":1},"qwe":{"passWord":"123","status":0},"qwe123":{"passWord":"123","status":0},"eric01":{"passWord":"123","status":0},"test01":{"passWord":"123","status":1}}
